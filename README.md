@@ -82,3 +82,8 @@ Add  **VirusTotal integration** to the manager `ossec.conf.manager`:
 - **To get your API key, first sign up for an account with VirusTotal.**  
 - **After signing up, you can access your API key from the VirusTotal portal.**
 
+**Restart agent**:
+```
+sudo systemctl restart wazuh-manager
+
+```
