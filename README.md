@@ -11,8 +11,31 @@ This project uses two **Ubuntu virtual machines**:
 - **Wazuh Manager VM**: collects events from agents, applies rules, triggers VirusTotal checks, and sends alerts.
 - **Wazuh Agent VM**: monitors critical directories for file changes and sends events to the manager.
 
-**Installation Steps (high level):**
+**Installation Steps:**
 1. Deploy Ubuntu VM for the manager.
 2. Install Wazuh manager on the manager VM.
 3. Deploy Ubuntu VM for the agent.
 4. Install Wazuh agent and configure it to communicate with the manager.
+
+## 2. Configuring Wazuh Agent for File Monitoring
+The agent monitors files and directories for changes using **File Integrity Monitoring (FIM)**.
+
+**Sample `ossec.conf.agent` snippet:**
+```xml
+<syscheck>
+  <disabled>no</disabled>
+  <frequency>43200</frequency>
+  <scan_on_start>yes</scan_on_start>
+
+  <!-- Directories to monitor -->
+  <directories>/etc,/usr/bin,/usr/sbin</directories>
+  <directories>/bin,/sbin,/boot</directories>
+  <directories realtime="yes">/root</directories> -- line to be added in order to mention which directories to be monitored
+
+  <!-- Exclude system directories -->
+  <ignore>/proc</ignore>
+  <ignore>/sys</ignore>
+  <ignore>/dev</ignore>
+</syscheck>
+
+<img width="392" height="234" alt="image" src="https://github.com/user-attachments/assets/f822ff86-45b7-4f52-aba4-2b9e3586d494" />
