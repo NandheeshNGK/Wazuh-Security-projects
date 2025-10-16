@@ -101,3 +101,23 @@ These steps are **not included in this project**, so please refer to the **offic
 
 
 Add or edit the email block in manager `ossec.conf`:
+```
+<global>
+  <email_notification>yes</email_notification>
+  <email_to>your-email@example.com</email_to>
+  <smtp_server>smtp.gmail.com</smtp_server>
+  <smtp_port>587</smtp_port>
+  <email_from>wazuh-alerts@example.com</email_from>
+</global>
+
+  <alerts>
+    <log_alert_level>3</log_alert_level>
+    <email_alert_level>3</email_alert_level>
+  </alerts>
+
+  <email_alerts>
+    <email_to>mail@gmail.com</email_to>
+    <rule_id>502,87105</rule_id>
+    <do_not_delay />
+  </email_alerts>
+
