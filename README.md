@@ -64,3 +64,15 @@ sudo systemctl restart wazuh-agent
 
 ```
 <img width="1100" height="544" alt="image" src="https://github.com/user-attachments/assets/a9dba24d-af89-47db-b628-c007a8afe50a" />
+
+## 4. VirusTotal Integration
+
+Add  **VirusTotal integration** to the manager `ossec.conf.manager`:
+```xml
+<integration>
+  <name>virustotal</name>
+  <api_key>YOUR_VT_API_KEY</api_key>
+  <rule_id>100200</rule_id>
+  <alert_format>json</alert_format>
+</integration>
+```
