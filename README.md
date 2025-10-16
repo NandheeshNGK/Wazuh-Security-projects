@@ -76,5 +76,9 @@ Add  **VirusTotal integration** to the manager `ossec.conf.manager`:
   <alert_format>json</alert_format>
 </integration>
 ```
--**To get your API key, first sign up for an account with VirusTotal.**
--**After signing up, you can access your API key from the VirusTotal portal.**
+
+**VirusTotal API Setup**
+
+- **To get your API key, first sign up for an account with VirusTotal.**  
+- **After signing up, you can access your API key from the VirusTotal portal.**
+
