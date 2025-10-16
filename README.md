@@ -43,7 +43,9 @@ The agent monitors files and directories for changes using **File Integrity Moni
 
 
 **Restart agent**:
+```
 sudo systemctl restart wazuh-agent
+```
 
 ## 3. Adding Local Rules on Wazuh Manager
 
