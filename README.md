@@ -41,3 +41,24 @@ The agent monitors files and directories for changes using **File Integrity Moni
 
 ![wazuh1](https://github.com/user-attachments/assets/b1b75a0c-1bb4-45c9-9b5f-a62a1762fc9b)
 
+
+**Restart agent**
+sudo systemctl restart wazuh-agent
+
+## 3. Adding Local Rules on Wazuh Manager
+
+**Create a custom rule on the manager to detect changes in /root**.
+**Sample `local_rules.xml` example:**
+```xml
+
+<group name="local,">
+  <rule id="100200" level="7">
+    <if_sid>550</if_sid>
+    <match>/root</match>
+    <description>File modified inside /root directory.</description>
+    <group>fim,vt-alert</group>
+  </rule>
+</group>
+
+```
+<img width="1121" height="544" alt="image" src="https://github.com/user-attachments/assets/a9dba24d-af89-47db-b628-c007a8afe50a" />
