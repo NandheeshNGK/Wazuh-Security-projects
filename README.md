@@ -101,7 +101,7 @@ These steps are **not included in this project**, so please refer to the **offic
 
 
 Add or edit the email block in manager `ossec.conf`:
-```
+```xml
 <global>
   <email_notification>yes</email_notification>
   <email_to>your-email@example.com</email_to>
@@ -120,4 +120,4 @@ Add or edit the email block in manager `ossec.conf`:
     <rule_id>502,87105</rule_id>
     <do_not_delay />
   </email_alerts>
-
+```
