@@ -82,8 +82,22 @@ Add  **VirusTotal integration** to the manager `ossec.conf.manager`:
 - **To get your API key, first sign up for an account with VirusTotal.**  
 - **After signing up, you can access your API key from the VirusTotal portal.**
 
-**Restart agent**:
+**Restart Manager**:
 ```
 sudo systemctl restart wazuh-manager
 
 ```
+
+## 5.Configure email notifications on the manager
+
+---
+
+### ⚠️ Important Note Before Configuring Email Alerts
+
+If you plan to use **Gmail SMTP** for email notifications, keep in mind that Gmail requires **additional configuration steps**, such as enabling App Passwords or adjusting SMTP settings.  
+These steps are **not included in this project**, so please refer to the **official Wazuh or Gmail SMTP documentation** for proper setup before proceeding.
+
+---
+
+
+Add or edit the email block in manager `ossec.conf`:
