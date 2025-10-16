@@ -139,9 +139,10 @@ Add or edit the email block in manager `ossec.conf`:
 To verify that your Wazuh setup correctly detects malware-like behavior, use the EICAR test file, which is a safe, industry-standard test string.
 
 - ### Download the EICAR Test File
+```xml
 sudo curl -Lo /root/eicar.com https://secure.eicar.org/eicar.com
 sudo ls -lah /root/eicar.com
-
+```
 **Expected Behavior** 
 - Action Expected Outcome
 - File created in /root	Wazuh agent detects a new suspicious file
