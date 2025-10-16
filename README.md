@@ -30,12 +30,13 @@ The agent monitors files and directories for changes using **File Integrity Moni
   <!-- Directories to monitor -->
   <directories>/etc,/usr/bin,/usr/sbin</directories>
   <directories>/bin,/sbin,/boot</directories>
-  <directories realtime="yes">/root</directories> -- line to be added in order to mention which directories to be monitored
+  <directories realtime="yes">/root</directories> -- Add the following line to define the directories that will be monitored
 
   <!-- Exclude system directories -->
   <ignore>/proc</ignore>
   <ignore>/sys</ignore>
   <ignore>/dev</ignore>
 </syscheck>
+```
 
 <img width="392" height="234" alt="image" src="https://github.com/user-attachments/assets/f822ff86-45b7-4f52-aba4-2b9e3586d494" />
