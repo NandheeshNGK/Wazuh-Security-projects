@@ -141,8 +141,7 @@ To verify that your Wazuh setup correctly detects malware-like behavior, use the
 - ### Download the EICAR Test File
   
 ```xml
-sudo curl -Lo /root/eicar.com https://secure.eicar.org/eicar.com
-sudo ls -lah /root/eicar.com
+sudo curl -Lo /root/eicar.com https://secure.eicar.org/eicar.com && sudo ls -lah /root/eicar.com
 ```
 **Expected Behavior** 
 - Action Expected Outcome
