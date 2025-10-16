@@ -121,3 +121,12 @@ Add or edit the email block in manager `ossec.conf`:
     <do_not_delay />
   </email_alerts>
 ```
+##**Note:**
+
+- log_alert_level 3: Logs alerts from level 3 and above.
+
+- email_alert_level 3: Sends email for alerts of level 3 and above.
+
+- rule_id: Specific rule IDs for which you want email notifications.
+  
+- Replace mail@gmail.com with your real email.
