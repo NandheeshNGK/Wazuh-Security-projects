@@ -132,4 +132,19 @@ Add or edit the email block in manager `ossec.conf`:
 - Replace mail@gmail.com with your mail id to which you want to receive email notifications.
 
 
-# Full Setup and implementation completed
+## Full Setup and implementation completed
+
+# Testing Security Detection (EICAR Test File)
+
+To verify that your Wazuh setup correctly detects malware-like behavior, use the EICAR test file, which is a safe, industry-standard test string.
+
+- Download the EICAR Test File
+sudo curl -Lo /root/eicar.com https://secure.eicar.org/eicar.com
+sudo ls -lah /root/eicar.com
+
+**Expected Behavior** 
+- Action Expected Outcome
+- File created in /root	Wazuh agent detects a new suspicious file
+- Rule Execution	Manager triggers rule 100200
+- VirusTotal Integration	File hash sent to VirusTotal for reputation check
+- Alerting	Email alert sent if file is flagged as malicious
