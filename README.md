@@ -39,4 +39,5 @@ The agent monitors files and directories for changes using **File Integrity Moni
 </syscheck>
 ```
 
-<img width="392" height="234" alt="image" src="https://github.com/user-attachments/assets/f822ff86-45b7-4f52-aba4-2b9e3586d494" />
+![wazuh1](https://github.com/user-attachments/assets/b1b75a0c-1bb4-45c9-9b5f-a62a1762fc9b)
+
