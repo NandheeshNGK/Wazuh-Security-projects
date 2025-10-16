@@ -132,20 +132,4 @@ Add or edit the email block in manager `ossec.conf`:
 - Replace mail@gmail.com with your mail id to which you want to receive email notifications.
 
 
- # Testing File Detection
-
-Use the EICAR test file to simulate a malicious file:
-
-sudo curl -Lo /root/eicar.com https://secure.eicar.org/eicar.com
-sudo ls -lah /root/eicar.com
-
-
-Expected behavior:
-
-Agent detects the new file in /root.
-
-Manager triggers rule 100200.
-
-VirusTotal checks the file hash.
-
-Email alert is sent if the file is flagged.
+#Full Setup and implementation completed
